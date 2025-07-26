@@ -2,6 +2,7 @@ services:
   - type: web
     name: keras-image-api  # ← 任意のアプリ名に変更してOK
     env: python
+    pythonVersion: 3.11
     plan: free
     buildCommand: pip install -r requirements.txt
     startCommand: python paintings.py
