@@ -18,20 +18,18 @@ app = Flask(__name__)
 
 
 MODEL_PATH = "model/model.05-0.51.model.keras"
-DRIVE_FILE_ID = "1ALcSlF-ct1hEUTsWlo4oQKdKRAz5lCz-"  
+# DRIVE_FILE_ID = "1ALcSlF-ct1hEUTsWlo4oQKdKRAz5lCz-"  
 
-# モデルをローカルにダウンロード（なければ）
-if not os.path.exists(MODEL_PATH):
-    print("Downloading model...")
-    os.makedirs("model", exist_ok=True)
-    gdown.download(f"https://drive.google.com/uc?id={DRIVE_FILE_ID}", MODEL_PATH, quiet=False)
+# # モデルをローカルにダウンロード（なければ）
+# if not os.path.exists(MODEL_PATH):
+#     print("Downloading model...")
+#     os.makedirs("model", exist_ok=True)
+#     gdown.download(f"https://drive.google.com/uc?id={DRIVE_FILE_ID}", MODEL_PATH, quiet=False)
 
 # モデルを読み込み
 model = load_model(MODEL_PATH)
 
 
-# app.secret_key = "your_secret_key_here"  
-# submitボタンを押した際にエラーが出た場合上の行のコメントアウトを削除し、your_secret_key_hereに任意の文字列（例:aidemy)を指定し、再度アプリケーションを実行してください。
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
