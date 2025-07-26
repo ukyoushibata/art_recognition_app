@@ -17,7 +17,7 @@ ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
 app = Flask(__name__)
 
 
-MODEL_PATH = "model/model.05-0.51.model.keras"
+MODEL_PATH = "model/model.46-0.71.model.keras"
 # DRIVE_FILE_ID = "1ALcSlF-ct1hEUTsWlo4oQKdKRAz5lCz-"  
 
 # # モデルをローカルにダウンロード（なければ）
